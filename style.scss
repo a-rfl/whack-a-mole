@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  background-image: url("./static/bg.jpg");
+  cursor: url("./static/cursor2.png"), auto;
+  overflow: hidden;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  // Texts
+  .entete {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    h2 {
+      text-transform: uppercase;
+    }
+    p {
+      font-size: 20px;
+      text-decoration: underline overline;
+    }
+  }
+  // Section with the holes
+  section {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .hole {
+      position: relative;
+      margin: 15px;
+      border: 1px solid white;
+      border-radius: 50%;
+      width: 200px;
+      padding-top: 200px;
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60%;
+      }
+    }
+  }
+}
+
+/* -- Tablet--*/
+@media only screen and(max-width: 992px) {
+  body {
+    cursor: auto;
+  }
+  main {
+    .entete {
+      p {
+        font-size: 30px;
+        text-decoration: underline;
+      }
+    }
+    // Section with the holes
+    section {
+      .hole {
+        margin: 10px;
+        width: 180px;
+        padding-top: 180px;
+      }
+    }
+  }
+}
+
+/* -- MOBILE--*/
+@media only screen and(max-width: 767px) {
+  body {
+    background-position: 25% 50%;
+  }
+  main {
+    justify-content: center;
+    .entete {
+      p {
+        font-size: 18px;
+        text-decoration: overline;
+      }
+    }
+    // Section with the holes
+    section {
+      width: 100%;
+      margin-top: 50px;
+      .hole {
+        margin: 8px;
+        width: 95px;
+        padding-top: 95px;
+      }
+    }
+  }
+}
